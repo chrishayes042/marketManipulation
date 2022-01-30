@@ -1,5 +1,5 @@
-var http = require('http');
-var dt = require('./myfirstmodule');
+let http = require('http');
+let dt = require('./myfirstmodule');
 
 http.createServer(function (req, res){
 

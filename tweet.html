@@ -1,0 +1,31 @@
+<div id="tweet" tweetID="1486846468887560201"></div>
+<div class="container">
+  <div>Symbol: <span class="symbol"></span> </div>
+    
+ <p>Open Price: <span class="open"></span></p>
+    
+    <p>Close Price: <span class="close"></span></p>
+    
+ </div>
+
+<script sync src="https://platform.twitter.com/widgets.js"></script> 
+
+<script>
+     window.onload = (function(){
+         var tweet = document.getElementById("tweet");
+        var id = tweet.getAttribute("tweetID");
+
+        twttr.widgets.createTweet(
+             id, tweet,
+            {
+                 conversation    : 'none',   // or all
+                 cards           : 'none',   // or visible
+                 linkColor       : '#cc0000',// default is blue
+                theme           : 'dark'   // or dark
+            })
+            .then(function (el){
+              el.contentDocument.querySeletor(".footer").style.display = "none";      
+           })
+        
+     })
+ </script>

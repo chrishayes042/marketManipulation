@@ -1,22 +1,16 @@
-window.onload = function(){
 
-var chart = new CanvasJS.chart("chartContainer",{
-    animationEnabled: true,
-    theme: "light2",
-    title:{
-        text: "Simple Line Chart"
-    },
-    axisY:{
-        includeZero: false
-    },
-    data:[{
-           type: "line",
-           dataPoints:[
-               {y:'.open'},
-               {y:'.close'}
-           ]}]
-       
 
+let myChart = document.getElementById('myChart').getContext('2d');
+
+let stockChart = new Chart(myChart,  {
+    type:'line',
+    data:{
+        labels:['Close Prices', 'Feb 2021'], // ADD JSON Date data here
+        datasets:[{
+            label:'stonks', // Chart label
+            data:[1,2] // Add JSON close price for the Date data
+            
+        }]
+    },
+    options:{}
 });
-chart.render();
-}

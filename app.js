@@ -8,10 +8,10 @@ jQuery.ajax({
         console.log(data);
 
 
-        var symbol = data['Meta Data']['2. Symbol']
-        var lastRefreshed = data['Meta Data']['3. Last Refreshed']
-        var open = data['Time Series (1min)'][lastRefreshed]['1. open']
-        var close = data['Time Series (1min)'][lastRefreshed]['4. close']
+        let symbol = data['Meta Data']['2. Symbol']
+        let lastRefreshed = data['Meta Data']['3. Last Refreshed']
+        let open = data['Time Series (1min)'][lastRefreshed]['1. open']
+        let close = data['Time Series (1min)'][lastRefreshed]['4. close']
 
 
     $('.symbol').html(symbol);
@@ -19,3 +19,6 @@ jQuery.ajax({
     $('.close').html(close);
     }
 })
+
+
+
